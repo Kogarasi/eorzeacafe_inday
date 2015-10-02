@@ -1,0 +1,19 @@
+/* line 1, /Users/kogarasi/Documents/eorzeacafe_inday/source/stylesheets/index.scss */
+.today-ok {
+  background-color: rgba(0, 0, 255, 0.3); }
+  /* line 4, /Users/kogarasi/Documents/eorzeacafe_inday/source/stylesheets/index.scss */
+  .today-ok h5 {
+    color: white; }
+  /* line 7, /Users/kogarasi/Documents/eorzeacafe_inday/source/stylesheets/index.scss */
+  .today-ok h2 {
+    color: #7986cb; }
+
+/* line 12, /Users/kogarasi/Documents/eorzeacafe_inday/source/stylesheets/index.scss */
+.today-ng {
+  background-color: rgba(255, 0, 0, 0.3); }
+  /* line 15, /Users/kogarasi/Documents/eorzeacafe_inday/source/stylesheets/index.scss */
+  .today-ng h5 {
+    color: white; }
+  /* line 18, /Users/kogarasi/Documents/eorzeacafe_inday/source/stylesheets/index.scss */
+  .today-ng h2 {
+    color: #e57373; }
