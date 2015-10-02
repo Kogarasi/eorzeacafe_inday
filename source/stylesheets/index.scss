@@ -1,0 +1,21 @@
+.today-ok {
+	background-color: rgba( 0,0,255,0.3 );
+
+	h5 {
+		color: white;
+	}
+	h2 {
+		color: #7986cb;
+	}
+}
+
+.today-ng {
+	background-color: rgba( 255,0,0,0.3 );
+	
+	h5 {
+		color: white;
+	}
+	h2 {
+		color: #e57373;
+	}
+}

@@ -1,0 +1,68 @@
+!!! 5
+
+%head
+  %title えおかふぇ in Day
+
+  %link{ rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css" }
+  %link{ rel:"stylesheet", href:"stylesheets/index.css" }
+
+  :css
+    body {
+      background-image: url( "/images/background.jpg" );
+      background-attachment: fixed;
+    }
+
+%body
+  .navbar-fixed
+    %nav.black{ style: "opacity:0.4;" }
+      .nav-wrapper
+        .center
+          %h4 えおかふぇ in Day
+  .container.center
+    .card-panel.today-card{ style:"background-color: rgba( 0,0,0, 0.6 );" }
+      %p{ style: "opacity: 0.6;" }
+        %h5.white-text 今日のえおかふぇ
+      .row
+        .col.s4.m4.l4
+          .card-panel.today-ok.one-person
+            %h5 ○ 1人
+            %h2 OK!!
+
+        .col.s4.m4.l4
+          .card-panel.today-ng.to-person
+            %h5 ○○ 2人
+            %h2 NG!!
+        .col.s4.m4.l4
+          .card-panel.today-ok.four-person
+            %h5 ○○○○ 4人
+            %h2 NOTHING
+    .card-panel.tommorow-card{ style:"background-color: rgba( 0,0,0, 0.6 );" }
+      %p{ style: "opacity: 0.6;" }
+        %h5.white-text 明日のえおかふぇ
+      .row
+        .col.s4.m4.l4
+          .card-panel.today-ok.one-person
+            %h5 ○ 1人
+            %h2 OK!!
+
+        .col.s4.m4.l4
+          .card-panel.today-ng.to-person
+            %h5 ○○ 2人
+            %h2 NG!!
+        .col.s4.m4.l4
+          .card-panel.today-ok.four-person
+            %h5 ○○○○ 4人
+            %h2 NOTHING
+
+
+%footer.white-text{ style: "background-color: rgba( 0,0,0,0.6 );"}
+  .footer-copyright
+    .copyright
+      .container
+        .center
+          kogarasi all rights reserverd.
+          %a.white-text{ href:"https://twitter.com/kogarasi_cross" }
+            @kogarasi_cross
+
+%script{ src:"https://code.jquery.com/jquery-2.1.4.min.js" }
+%script{ src:"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js" }
