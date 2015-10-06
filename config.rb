@@ -55,6 +55,11 @@ set :images_dir, 'images'
 
 set :haml, layout:false
 
+configure :development do
+  ignore "source/typescripts/*"
+  activate :livereload
+  activate :typescript
+end
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
