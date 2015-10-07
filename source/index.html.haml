@@ -20,77 +20,30 @@
         .center
           %h4 えおかふぇ in Day
   .container.center
+    .card-panel.white-text{ style:"background-color: rgba( 0,0,0, 0.6 );" }
+      今日と明日のエオルゼアカフェの空席情報を確認できます
+      %br
+      非公式ですので確実な物ではないですが承知の上ご利用ください！
+      %br
+      %a.twitter-share-button{ href:"https://twitter.com/share" } Tweet
+      %p
+        チケット情報のアプリについても鋭意制作中です！乞うご期待！
+      
     .card-panel.today-card{ style:"background-color: rgba( 0,0,0, 0.6 );" }
-      %p{ style: "opacity: 0.6;" }
-        %h5.white-text 今日のえおかふぇ
-      .row
-        %span.white-text
-          11:30回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
-      .row
-        %span.white-text
-          14:00回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
-      .row
-        %span.white-text
-          16:30回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
-      .row
-        %span.white-text
-          19:00回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
+      %h5.white-text
+        今日のえおかふぇ
+        %span.today-date
+          xx/xx
+      - { first:"11:30", second:"14:00", third:"16:30", fourth:"19:00" }.each do |key, date|
+        .row{ class: key }
+          %span.white-text
+            #{date}
+          .divider
+          - [ "one-person", "two-person", "four-person" ].each_with_index do |_class, key|
+            .col.s12.m12.l4
+              .card-panel.today-ng{ class: _class }
+                %h5= "○"*(2**key) + " #{2**key}人"
+                %h2 NG!!
     .row
       :plain
         <ins class="adsbygoogle"
@@ -100,78 +53,20 @@
         data-ad-format="auto"></ins>
 
     .card-panel.tommorow-card{ style:"background-color: rgba( 0,0,0, 0.6 );" }
-      %p{ style: "opacity: 0.6;" }
-        %h5.white-text 明日のえおかふぇ
-      .row
-        %span.white-text
-          11:30回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
-      .row
-        %span.white-text
-          14:00回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
-      .row
-        %span.white-text
-          16:30回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
-      .row
-        %span.white-text
-          19:00回
-        .divider
-        .col.s12.m12.l4
-          .card-panel.today-ng.one-person
-            %h5 ○ 1人
-            %h2 読み込み中
-
-        .col.s12.m12.l4
-          .card-panel.today-ng.to-person
-            %h5 ○○ 2人
-            %h2 読み込み中
-        .col.s12.m12.l4
-          .card-panel.today-ng.four-person
-            %h5 ○○○○ 4人
-            %h2 読み込み中
-
-
+      %h5.white-text
+        明日のえおかふぇ
+        %span.tomorrow-date
+          xx/xx
+      - { first:"11:30", second:"14:00", third:"16:30", fourth:"19:00" }.each do |key, date|
+        .row{ class: key }
+          %span.white-text
+            #{date}
+          .divider
+          - [ "one-person", "two-person", "four-person" ].each_with_index do |_class, key|
+            .col.s12.m12.l4
+              .card-panel.today-ng{ class: _class }
+                %h5= "○"*(2**key) + " #{2**key}人"
+                %h2 NG!!
 
 %footer.white-text{ style: "background-color: rgba( 0,0,0,0.6 );"}
   .footer-copyright
@@ -190,3 +85,6 @@
 
 :javascript
   (adsbygoogle = window.adsbygoogle || []).push({});
+
+:javascript
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
