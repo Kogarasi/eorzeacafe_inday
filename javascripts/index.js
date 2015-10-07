@@ -23,7 +23,6 @@ function loading( data ){
 	
 	$.each( data, function( key, val ){
 		var keys = key.split( "-" );
-			
 		setStatus( keys, val );
 	});
 }
@@ -43,8 +42,6 @@ function setStatus( keys, state ){
 		}
 	} else if ( key_date == tomorrow ) {
 		var _class = ".tomorrow-card ." + time_program[ keys[ 1 ] ] + " ." + person_program[ person ];
-		console.log( "data is today" );
-		console.log( "class::" + _class );
 
 		if( state ){
 			var obj = $( _class );
