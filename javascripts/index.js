@@ -1,5 +1,5 @@
 var _today = new Date();
-var _tomorrow = new Date( _today + 24*60*60*1000 );
+var _tomorrow = new Date( _today.getTime() + 24*60*60*1000 );
 var today = (_today.getMonth()+1) + "/" + _today.getDate();
 var tomorrow = (_tomorrow.getMonth()+1) + "/" + _tomorrow.getDate();
 
@@ -34,6 +34,15 @@ function setStatus( keys, state ){
 
 	if( key_date == today ) {
 		var _class = ".today-card ." + time_program[ keys[ 1 ] ] + " ." + person_program[ person ];
+
+		if( state ){
+			var obj = $( _class );
+			obj.find( "h2 " ).text( "OK!!" );
+			obj.addClass( "today-ok" );
+			obj.removeClass( "today-ng" );
+		}
+	} else if ( key_date == tomorrow ) {
+		var _class = ".tomorrow-card ." + time_program[ keys[ 1 ] ] + " ." + person_program[ person ];
 		console.log( "data is today" );
 		console.log( "class::" + _class );
 
@@ -43,8 +52,6 @@ function setStatus( keys, state ){
 			obj.addClass( "today-ok" );
 			obj.removeClass( "today-ng" );
 		}
-	} else if ( key_date == tomorrow ) {
-		console.log( "data is tomorrow" );
 	}
 }
 ;
